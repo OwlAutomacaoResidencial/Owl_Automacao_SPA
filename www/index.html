@@ -10,7 +10,15 @@
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <!-- link href="min/custom-min.css" type="text/css" rel="stylesheet" -->
     <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form-validation.js"></script>
 </head>
+
 <body id="top" class="scrollspy">
 
 <!-- Pre Loader -->
@@ -21,26 +29,24 @@
     <div class="loader-section section-right"></div>
  
 </div>
-
 <!--Navigation-->
  <div class="navbar-fixed">
     <nav id="nav_f z-depth-1" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="#" id="logo-container" class="brand-logo">OWL</a>
+                <img class="header_logo" src="img/logo.png"/>
+                <a href="#" id="logo-container" class="brand-logo">OWL</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#intro">Produto</a></li>
-                    <li><a href="#work">Simulação</a></li>
                     <li><a href="#team">Quem Somos</a></li>
                     <li><a href="#contact">Contato</a></li>
-                    <li><a class="white-text" href="https://www.facebook.com.br" target="_blank"><i class="small fa fa-facebook-square white-text"></i></a></li>
+                    <li><a class="white-text" href="https://www.facebook.com/owlautomacao/" target="_blank"><i class="small fa fa-facebook-square white-text"></i></a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#intro">Produto</a></li>
-                    <li><a href="#work">Simulação</a></li>
                     <li><a href="#team">Quem Somos</a></li>
                     <li><a href="#contact">Contato</a></li>
-                    <li><a href="https://www.facebook.com.br" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/owlautomacao/" target="_blank">Facebook</a></li>
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>
@@ -50,14 +56,14 @@
 
 <!--Hero-->
 <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <h1 class="text_h center header cd-headline letters type">
+    <div class="header_container">
+        <!--<h1 class="text_h center header cd-headline letters type">-->
+        <h1 class="text_h_custom left header">
             <span>OWL</span> 
-            <span class="cd-words-wrapper waiting">
-                <b class="is-visible">Automação Residencial</b>
-                <b>Segurança</b>
-                <b>Comodidade</b>
-            </span>
+            <!--<span class="cd-words-wrapper waiting">
+                
+            </span>--></br>
+            <a style="color:white;" class="is-visible">Automação Residencial</a>
         </h1>
     </div>
 </div>
@@ -67,242 +73,115 @@
     <div class="container">
         <div class="row">
             <div  class="col s12">
-                <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
+                <h2 class="center header text_h2"> <span class="span_h2">Monitore</span> sua casa de qualquer lugar com nosso aplicativo. Você pode <span class="span_h2"> controlar </span> as luzes e sistema de jardinagem, conferir sensores de gás, temperatura, umidade, entre outros.</h2>
             </div>
 
-            <div  class="col s12 m4 l4">
+            <div class="col s3">
                 <div class="center promo promo-example">
-                    <i class="mdi-image-flash-on"></i>
-                    <h5 class="promo-caption">Speeds up development</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                    <i class="mdi-image-brush"></i>
+                    <h5 class="promo-caption">Totalmente customizável</h5>
+                    <p class="light center">Não fique amarrado à pacotes caros e pouco customizáveis. Com a OWL escolha o cômodo que quiser e quais componentes deseja instalar.</p>
+                </div>
+                <div class="center promo promo-example">
+                    <i class="mdi-hardware-phone-iphone"></i>
+                    <h5 class="promo-caption">Aplicativo intuitivo</h5>
+                    <p class="light center">com poucos cliques configure o que desejar na casa de onde estiver.</p>
                 </div>
             </div>
-            <div class="col s12 m4 l4">
+            <div class="col s12 m6 l6">
+                    <div class="center promo promo-example">
+                        <img src="img/cel.png" style="width: 100%;"/>
+                        <!--<i class="mdi-social-group"></i>
+                        <h5 class="promo-caption">User Experience Focused</h5>
+                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>-->
+                    </div>
+            </div>
+            <div  class="col s3">
                 <div class="center promo promo-example">
-                    <i class="mdi-social-group"></i>
+                    <i class="mdi-image-flare"></i>
+                    <h5 class="promo-caption">Cenários</h5>
+                    <p class="light center">Vai viajar e não quer deixar a casa sozinha? não se preocupe, a OWL apaga e acende luzes, de modo aleatório para simular pessoas na casa.</p>
+                </div>
+                <div class="center promo promo-example">
+                    <i class="mdi-maps-beenhere"></i>
+                    <h5 class="promo-caption">Registros e Agendamentos</h5>
+                    <p class="light center">Configure suas luzes para desligar depois de algum horário, configure um horário de segurança para o app notificar caso exista alguma porta aberta, entre outras funcionalidades.</p>
+                </div>
+            </div>
+            <!--<div class="col s12 m6 l6">
+                <div class="center promo promo-example">
+                    <img src="img/cel.png" style="width: 100%;"/>
+                    <!--<i class="mdi-social-group"></i>
                     <h5 class="promo-caption">User Experience Focused</h5>
                     <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-hardware-desktop-windows"></i>
-                    <h5 class="promo-caption">Fully responsive</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Work-->
-<div class="section scrollspy" id="work">
-    <div class="container">
-        <h2 class="header text_b">Simulação</h2>
-        <div class="row">
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project1.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project2.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project3.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project4.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project5.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project6.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Project link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                    </div>
-                </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/parallax1.png"></div>
+    <div class="parallax"><img src="img/parallax1.jpg"></div>
 </div>
 
 <!--Team-->
 <div class="section scrollspy" id="team">
     <div class="container">
         <h2 class="header text_b">Quem Somos</h2>
-        <div class="row">
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar1.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Flash <br/>
-                            <small><em><a class="red-text text-darken-1" href="#">CEO</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m3">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar2.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Cat Woman<br/>
-                            <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small>
-                        </span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m3">
+        <p class="light center" style="font-size: 24px">
+                Localizada em Maringá, a OWL foi criada a partir de um trabalho acadêmico por estudantes de Engenharia de Software, com o objetivo de oferecer uma solução de automação barata e simples, através de um sistema modular e totalmente eficaz.
+        </p>
+        <div class="row" id="team_row">
+            <div class="col s10 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
                         <img class="activator" src="img/avatar3.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">
-                            Capt. America <br/>
-                            <small><em><a class="red-text text-darken-1" href="#">CMO</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
+                        <span class="card-title activator grey-text text-darken-4">Douglas Missura <br/></span>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m3">
+            <div class="col s10 m2">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img src="img/avatar1.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Guilherme Beidaki<br/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m2">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/avatar2.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"> Lucas </br>
+                            Leite <br/></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
                         <img class="activator" src="img/avatar4.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Robin<br/>
-                            <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
-                        <p>
-                            <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
-                                <i class="fa fa-twitter-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </p>
+                        <span class="card-title activator grey-text text-darken-4">Luiz Carlos Pessanha<br/></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m2">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="img/avatar5.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Rodrigo Zanão<br/></span>
                     </div>
                 </div>
             </div>
@@ -312,10 +191,11 @@
 
 <!--Footer-->
 <footer id="contact" class="page-footer default_color scrollspy">
-    <div class="container">  
+    <div class="container">
+        <div class="contatoHeader"> <i class="mdi-communication-chat"></i><span>Contato</span></div>
         <div class="row">
             <div class="col l12 s12">
-                <form class="col s12" action="contact.php" method="post">
+                <form class="col s12" id="contactForm" name="contact">
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix white-text"></i>
@@ -324,16 +204,16 @@
                         </div>
                         <div class="input-field col s6">
                             <i class="mdi-communication-email prefix white-text"></i>
-                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <input id="icon_email" name="email" type="email" class="validate white-text" data-validation="email">
                             <label for="icon_email" class="white-text">E-mail</label>
                         </div>
                         <div class="input-field col s12">
                             <i class="mdi-editor-mode-edit prefix white-text"></i>
-                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text" ></textarea>
                             <label for="icon_prefix2" class="white-text">Mensagem</label>
                         </div>
                         <div class="col s12">
-                            <button class="btn waves-effect waves-light default_color darken-1 float-right" type="submit">Enviar
+                            <button class="btn waves-effect waves-light default_color darken-1 float-right" id="submitContact">Enviar
                                 <i class="mdi-content-send right white-text"></i>
                             </button>
                         </div>
@@ -352,5 +232,55 @@
     <!--  Scripts-->
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
-    </body>
+
+    <div id="modalContactSuccess" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>A sua mensagem já foi entregue, obrigado pelo contato!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+
+    <div id="modalContactError" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Não foi possível enviar a sua mensagem. Tente novamente mais tarde!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+
+    <div id="modalContactErrorEmail" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe o seu e-mail para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+
+    <div id="modalContactErrorName" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe o seu nome para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+
+    <div id="modalContactErrorText" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe uma mensagem para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+</body>
 </html>

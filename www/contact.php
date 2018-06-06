@@ -2,9 +2,9 @@
 
 if(isset($_POST['email'])) {
 
-    $email_to = "YOUR EMAIL ID GOES HERE";
+    $email_to = "contato@owlautomacao.com.br";
  
-    $email_subject = "Website Contact";
+    $email_subject = "Contato OWL - Automação Residencial";
 
  
     function died($error) {

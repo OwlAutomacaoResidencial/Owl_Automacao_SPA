@@ -5,7 +5,7 @@
  * Thanks for MaterializeCSS.com
  */
 
-.default_color{background-color: #069DB3;}
+.default_color{background-color: #004063;}
 
 .default_color_text{color: red !important;}
 
@@ -15,12 +15,68 @@
 
 #intro, #work, #team {padding-top: 4rem;}
 
+.header_container {
+    margin-left: 5%;
+    padding-top: 50px !important;
+}
+
+.cellphone {
+    background-image: url('../img/cel.png');
+}
+
+.member_photo {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}
+
+.contatoHeader i {
+    font-size: 45px;
+    color:white;
+}
+
+.contatoHeader span {
+    margin-left: 20px;
+    font-size: 60px;
+    color:white;
+}
+
+@media only screen and (max-width: 601px) {
+    .header_logo {
+        width: 50px;
+        height: 50px;
+
+        margin-top: 3px;
+        margin-left: 19%;
+    }
+}
+
+@media only screen and (min-width: 601px) { 
+    .header_logo {
+        width: 58px;
+        height: 58px;
+        
+        margin-top: 3px;
+        margin-right: 5px;
+    }
+}
+
+
+.text_h_custom {
+    font-size: 6.0em;
+    font-weight: 100;
+    color:white;
+}
+
 
 #index-banner {
     min-height: 632px;
     max-height: 864px;
     position: relative;
-    background-color: #069DB3;
+    /*background-color: #004063;*/
+    background-image: url("../img/parallax5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #nav_f{
@@ -48,20 +104,20 @@
 
 .text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
 
-.span_h2 {font-weight: 300;color: #069DB3;}
+.span_h2 {font-weight: 300;color: #004063;}
 
-.text_b{color: #069DB3;}
+.text_b{color: #004063;}
 
 .in{font-weight: 400 !important; font-style: normal !important;}
 
 .promo i {
-    color: #069DB3;
+    color: #004063;
     font-size: 7rem;
     display: block;
 }
-.card-content a {color: #069DB3;}
+.card-content a {color: #004063;}
 
-.card-content a:hover {color: #069DB3;}
+.card-content a:hover {color: #004063;}
 
 #work, #team{background: rgb(247, 247, 247);}
 
@@ -112,7 +168,7 @@ nav ul a {
 }
 
 .cd-headline.type .cd-words-wrapper.selected b {
-    color: #069DB3;
+    color: #004063;
 }
 
 .cd-headline.type b {
