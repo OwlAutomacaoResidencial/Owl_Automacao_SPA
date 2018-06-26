@@ -6,17 +6,22 @@
     <meta name="theme-color" content="#2196F3">
     <title>OWL - Automação Residencial</title>
 
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+    
     <!-- CSS  -->
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-    <!-- link href="min/custom-min.css" type="text/css" rel="stylesheet" -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
     <script src="js/app.js"></script>
-    <script src="js/form-validation.js"></script>
 </head>
 
 <body id="top" class="scrollspy">
@@ -34,10 +39,11 @@
     <nav id="nav_f z-depth-1" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-                <img class="header_logo" src="img/logo.png"/>
+                <img class="header_logo hide-on-med-and-down" src="img/logo.png"/>
                 <a href="#" id="logo-container" class="brand-logo">OWL</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#intro">Produto</a></li>
+                    <li><a href="#work">Simular Preço</a></li>
                     <li><a href="#team">Quem Somos</a></li>
                     <li><a href="#contact">Contato</a></li>
                     <li><a class="white-text" href="https://www.facebook.com/owlautomacao/" target="_blank"><i class="small fa fa-facebook-square white-text"></i></a></li>
@@ -54,21 +60,15 @@
     </nav>
 </div>
 
-<!--Hero-->
 <div class="section no-pad-bot" id="index-banner">
     <div class="header_container">
-        <!--<h1 class="text_h center header cd-headline letters type">-->
         <h1 class="text_h_custom left header">
-            <span>OWL</span> 
-            <!--<span class="cd-words-wrapper waiting">
-                
-            </span>--></br>
+            <span>OWL</span></br>
             <a style="color:white;" class="is-visible">Automação Residencial</a>
         </h1>
     </div>
 </div>
 
-<!--Intro and service-->
 <div id="intro" class="section scrollspy">
     <div class="container">
         <div class="row">
@@ -85,15 +85,18 @@
                 <div class="center promo promo-example">
                     <i class="mdi-hardware-phone-iphone"></i>
                     <h5 class="promo-caption">Aplicativo intuitivo</h5>
-                    <p class="light center">com poucos cliques configure o que desejar na casa de onde estiver.</p>
+                    <p class="light center">Com poucos cliques configure o que desejar na casa de onde estiver.</p>
                 </div>
             </div>
             <div class="col s12 m6 l6">
-                    <div class="center promo promo-example">
-                        <img src="img/cel.png" style="width: 100%;"/>
-                        <!--<i class="mdi-social-group"></i>
-                        <h5 class="promo-caption">User Experience Focused</h5>
-                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>-->
+
+                    <div class="center promo promo-example" id="cellphone-example">
+                            <div class="switch app">
+                                    <label>
+                                      <input id="lightStatus" type="checkbox" checked="true">
+                                      <span id="lightButton" class="lever"></span>
+                                    </label>
+                                  </div>
                     </div>
             </div>
             <div  class="col s3">
@@ -108,80 +111,147 @@
                     <p class="light center">Configure suas luzes para desligar depois de algum horário, configure um horário de segurança para o app notificar caso exista alguma porta aberta, entre outras funcionalidades.</p>
                 </div>
             </div>
-            <!--<div class="col s12 m6 l6">
-                <div class="center promo promo-example">
-                    <img src="img/cel.png" style="width: 100%;"/>
-                    <!--<i class="mdi-social-group"></i>
-                    <h5 class="promo-caption">User Experience Focused</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>-->
         </div>
     </div>
 </div>
 
+<div class="section scrollspy" id="work">
+    <div class="container">
+        <h2 class="header text_b"><i class="mdi-content-drafts"></i>Simulação</h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div>
+                    <span class="header text_b simu_header"><i class="mdi-action-perm-scan-wifi"></i>Sensores disponíveis</span>
+                </div>
+                <div class="row">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/fogo.png" style="width: 64px; height: 64px;"/>
+                            <a>sensor incêndio </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/chuva.png" style="width: 64px; height: 64px;"/>
+                            <a>sensor chuva </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/gas.png" style="width: 64px; height: 64px;"/>
+                            <a>sensor gás </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/luz.png" style="width: 64px; height: 64px;"/>
+                            <a>controle lâmpada </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/solo.png" style="width: 64px; height: 64px;"/>
+                            <a>sensor chuva </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/temperatura.png" style="width: 64px; height: 64px;"/>
+                            <a>controle temp. </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                        <div style="text-align: center">
+                            <img src="img/Icons/umidade.png" style="width: 64px; height: 64px;"/>
+                            <a>controle umidade solo </br> <b>R$ 20,00</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m8 l8">
+                <div style="text-align: center;">
+                    <span class="header text_b simu_header"><i class="mdi-action-home"></i>Minha Casa</span>
+                </div>
+                <div class="card">
+                    <div class="stackDrop no-item">
+                        <span style="text-align: center">Arraste os sensores desejados aqui!</span>  
+                    </div>
+                    <input type="text" value="" id="valorTotal" readonly/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/parallax1.jpg"></div>
+    <div class="parallax"><img src="img/parallax1-min.jpg"></div>
 </div>
 
 <!--Team-->
 <div class="section scrollspy" id="team">
     <div class="container">
-        <h2 class="header text_b">Quem Somos</h2>
+        <h2 class="header text_b center">Quem Somos</h2>
         <p class="light center" style="font-size: 24px">
                 Localizada em Maringá, a OWL foi criada a partir de um trabalho acadêmico por estudantes de Engenharia de Software, com o objetivo de oferecer uma solução de automação barata e simples, através de um sistema modular e totalmente eficaz.
         </p>
-        <div class="row" id="team_row">
-            <div class="col s10 m2">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar3.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Douglas Missura <br/></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col s10 m2">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img src="img/avatar1.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Guilherme Beidaki<br/>
-                        </span>
+        <div>
+            <div class="row row-centered" id="team_row">
+                <div class="col col-centered s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar3.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><a>Douglas Missura</a> <br/></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col s10 m2">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar2.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"> Lucas </br>
-                            Leite <br/></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col s10 m2">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar4.png">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Luiz Carlos Pessanha<br/></span>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img src="img/avatar1.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><a>Guilherme Beidaki</a><br/>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col s10 m2">
-                <div class="card card-avatar">
-                    <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="img/avatar5.png">
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar2.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"> <a>Lucas</a> </br>
+                                <a>Leite</a> <br/></span>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Rodrigo Zanão<br/></span>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar4.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><a>Luiz</a> </br><a>Pessanha</a><br/></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar5.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><a>Rodrigo Zanão</a><br/></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -229,11 +299,7 @@
     </div>
 </footer>
 
-    <!--  Scripts-->
-    <script src="min/plugin-min.js"></script>
-    <script src="min/custom-min.js"></script>
-
-    <div id="modalContactSuccess" class="modal" style="width:500px">
+<div id="modalContactSuccess" class="modal" style="width:500px">
         <div class="modal-content">
             <h4>Contato com OWL</h4>
             <p>A sua mensagem já foi entregue, obrigado pelo contato!</p>
@@ -242,7 +308,7 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
         </div>
     </div>
-
+   
     <div id="modalContactError" class="modal" style="width:500px">
         <div class="modal-content">
             <h4>Contato com OWL</h4>
@@ -252,7 +318,7 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
         </div>
     </div>
-
+   
     <div id="modalContactErrorEmail" class="modal" style="width:500px">
         <div class="modal-content">
             <h4>Contato com OWL</h4>
@@ -262,7 +328,7 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
         </div>
     </div>
-
+   
     <div id="modalContactErrorName" class="modal" style="width:500px">
         <div class="modal-content">
             <h4>Contato com OWL</h4>
@@ -272,7 +338,7 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
         </div>
     </div>
-
+   
     <div id="modalContactErrorText" class="modal" style="width:500px">
         <div class="modal-content">
             <h4>Contato com OWL</h4>

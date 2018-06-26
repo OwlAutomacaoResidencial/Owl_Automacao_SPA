@@ -5,6 +5,15 @@
  * Thanks for MaterializeCSS.com
  */
 
+/*html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}*/
+
 .default_color{background-color: #004063;}
 
 .default_color_text{color: red !important;}
@@ -13,21 +22,41 @@
     padding: 0 15px;
 }
 
-#intro, #work, #team {padding-top: 4rem;}
+.card .card-content {
+    padding: 2% !important;
+}
+
+#intro, #work, #team {padding-top: 2rem;}
+
+#team .row {
+    display: inline-flex;
+}
 
 .header_container {
     margin-left: 5%;
     padding-top: 50px !important;
 }
 
+.waves-effect {
+    margin: 0 auto !important;
+}
+
 .cellphone {
     background-image: url('../img/cel.png');
+}
+
+.row .col.m2 {
+    width: 14% !important;
 }
 
 .member_photo {
     text-align: center;
     margin-top: 20px;
     display: block;
+}
+
+#contact {
+    background: #161616 !important;
 }
 
 .contatoHeader i {
@@ -41,17 +70,188 @@
     color:white;
 }
 
-@media only screen and (max-width: 601px) {
-    .header_logo {
-        width: 50px;
-        height: 50px;
+.card .card-image img {
+    object-fit: cover;
+}
 
-        margin-top: 3px;
-        margin-left: 19%;
+.row .col.m2.draggable-icon {
+    width: 100px !important;
+    height: 120px;
+}
+
+.col.m2.draggable-icon a {
+    color: #000;
+}
+
+.simu_header {
+    font-size: 2rem !important;
+}
+
+.stackDrop {
+    width: 100%; 
+    height: 600px; 
+    display: block;
+    text-align: center;
+}
+
+.stackDrop.no-item {
+    line-height: 600px !important;
+}
+
+#team .card-avatar .card-content a {
+    color: #000;
+}
+
+.dragged-in {
+    margin-top: 20px;
+}
+
+#valorTotal {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    border-bottom: none !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: normal !important;
+}
+
+@media only screen and (max-width: 400px) {
+    #work {
+        display: none;
+    }
+
+    .parallax img {
+        content: url("../img/lights-400.jpeg") !important;
+    }
+
+    #index-banner {
+        background-position-x: -700px !important;
+    }
+
+    nav a.button-collapse {
+        left: -10px !important;
+    }
+
+    .header_logo {
+        display: none;
+    }
+
+    .text_h_custom {
+        font-size: 4.2rem !important;
+    }
+
+    .switch.app {
+        padding-top: 65%;
+        padding-left: 20%;
+    }
+
+    #cellphone-example {
+        background-image: url('../img/cel.png');
+        background-repeat: no-repeat;
+        height: 700px;
+        margin: 0 auto;
+        width: 343px;
+    }
+
+    .switch.app {
+        padding-top: 92%;
+        padding-left: 60%;
     }
 }
 
-@media only screen and (min-width: 601px) { 
+@media only screen and (max-width: 601px) and (min-width: 401px) {
+    #work {
+        display: none;
+    }
+    
+    .parallax img {
+        content: url("../img/lights-600.jpeg") !important;
+    }
+
+    .text_h_custom {
+        font-size: 4.2rem !important;
+    }
+
+    .switch label input[type=checkbox]:checked+.lever:after {
+        left: 20px !important;
+    }
+
+    .switch label .lever:after {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .switch label .lever {
+        width: 25px !important;
+        height: 10px !important;
+    }
+    
+    #cellphone-example {
+        background-image: url('../img/cel.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        margin: 0 auto;
+        width: 343px;
+    }
+
+    .switch.app {
+        padding-top: 92%;
+        padding-left: 60%;
+    }
+}
+
+@media only screen and (max-width: 601px){
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }
+
+    .card .card-image img {
+        object-position: top !important;
+    }
+
+    .row .col.m2 {
+        width: 60% !important;
+        float: none;
+        margin: auto;
+    }
+
+    h2 {
+        font-weight: 100 !important;
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+    }
+
+    .text_b {
+        font-weight: 400 !important;
+    }
+
+    .row .col {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .switch.app {
+        padding-top: 107%;
+        padding-left: 60%;
+    }
+
+    #cellphone-example {
+        background-image: url('../img/cel.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 343px; 
+        height: 800px;
+        margin:auto;
+    }
+
     .header_logo {
         width: 58px;
         height: 58px;
@@ -61,6 +261,15 @@
     }
 }
 
+@media only screen and (max-width: 601px) {
+    .header_logo {
+        width: 50px;
+        height: 50px;
+
+        margin-top: 3px;
+        margin-left: 19%;
+    }
+}
 
 .text_h_custom {
     font-size: 6.0em;
@@ -74,7 +283,7 @@
     max-height: 864px;
     position: relative;
     /*background-color: #004063;*/
-    background-image: url("../img/parallax5.jpg");
+    background-image: url("../img/parallax5-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

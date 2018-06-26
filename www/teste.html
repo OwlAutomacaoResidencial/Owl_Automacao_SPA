@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>OWL - Automação Residencial</title>
+
+    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+    <!-- link href="min/custom-min.css" type="text/css" rel="stylesheet" -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form-validation.js"></script>
+</head>
+
+<body id="top" class="scrollspy">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f z-depth-1" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <img class="header_logo" src="img/logo.png"/>
+                <a href="#" id="logo-container" class="brand-logo">OWL</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro">Produto</a></li>
+                    <li><a href="#team">Quem Somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a class="white-text" href="https://www.facebook.com/owlautomacao/" target="_blank"><i class="small fa fa-facebook-square white-text"></i></a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">Produto</a></li>
+                    <li><a href="#team">Quem Somos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="https://www.facebook.com/owlautomacao/" target="_blank">Facebook</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="header_container">
+        <h1 class="text_h_custom left header">
+            <span>OWL</span></br>
+            <a style="color:white;" class="is-visible">Automação Residencial</a>
+        </h1>
+    </div>
+</div>
+
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="img/parallax1-min.jpg"></div>
+</div>
+
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b center">Quem Somos</h2>
+        <p class="light center" style="font-size: 24px">
+                Localizada em Maringá, a OWL foi criada a partir de um trabalho acadêmico por estudantes de Engenharia de Software, com o objetivo de oferecer uma solução de automação barata e simples, através de um sistema modular e totalmente eficaz.
+        </p>
+        <div>
+            <div class="row row-centered" id="team_row">
+                <div class="col col-centered s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar3.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Douglas Missura <br/></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img src="img/avatar1.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Guilherme Beidaki<br/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar2.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"> Lucas </br>
+                                Leite <br/></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar4.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Luiz </br>Pessanha<br/></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 m2">
+                    <div class="card card-avatar">
+                        <div class="card-image">
+                            <img class="activator" src="img/avatar5.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Rodrigo Zanão<br/></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">
+        <div class="contatoHeader"> <i class="mdi-communication-chat"></i><span>Contato</span></div>
+        <div class="row">
+            <div class="col l12 s12">
+                <form class="col s12" id="contactForm" name="contact">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">Nome</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text" data-validation="email">
+                            <label for="icon_email" class="white-text">E-mail</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text" ></textarea>
+                            <label for="icon_prefix2" class="white-text">Mensagem</label>
+                        </div>
+                        <div class="col s12">
+                            <button class="btn waves-effect waves-light default_color darken-1 float-right" id="submitContact">Enviar
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container">
+            Powered by OWL | 2018
+        </div>
+    </div>
+</footer>
+
+<script src="min/plugin-min.js"></script>
+<script src="min/custom-min.js"></script>
+
+
+<div id="modalContactSuccess" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>A sua mensagem já foi entregue, obrigado pelo contato!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+   
+    <div id="modalContactError" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Não foi possível enviar a sua mensagem. Tente novamente mais tarde!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+   
+    <div id="modalContactErrorEmail" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe o seu e-mail para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+   
+    <div id="modalContactErrorName" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe o seu nome para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+   
+    <div id="modalContactErrorText" class="modal" style="width:500px">
+        <div class="modal-content">
+            <h4>Contato com OWL</h4>
+            <p>Informe uma mensagem para contato.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendi!</a>
+        </div>
+    </div>
+</body>
+</html>
