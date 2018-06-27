@@ -2,10 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.modal').modal();
   });
 
+  $( document ).ready(function() {
+    $(".button-collapse").sideNav();
+  });
+
 $(document).ready(function() {
     var request;
-    var totalSimulacao = 0.0;
+    var totalSimulacao = 249;
     var quantidadeSensores = 0;
+
+    var valorEsp = 24;
 
     $('.draggable-icon').each(function() {
         $(this).draggable({
@@ -17,7 +23,7 @@ $(document).ready(function() {
     });
     
     $(".stackDrop").droppable({
-        tolerance: "intersect",
+        tolerance: "pointer", 
         accept: ".draggable-icon",
         activeClass: "ui-state-default",
         hoverClass: "ui-state-hover",
@@ -27,7 +33,7 @@ $(document).ready(function() {
                     revert: true
                 });
             } else {
-                $(".stackDrop").find("span").remove();
+                $("#dragImg").remove();
                 $(".stackDrop").removeClass("no-item");
 
                 var toAppend = $(ui.draggable).clone();
@@ -36,10 +42,10 @@ $(document).ready(function() {
                     helper: "original"
                 }).addClass('new');
 
-                var valorSensor = $(toAppend).attr("valor");
+                var valorSensor = parseFloat($(toAppend).attr("valor")) + valorEsp;
 
                 totalSimulacao += parseFloat(valorSensor);
-                $("#valorTotal").val("Valor Total da Simulação : R$" + totalSimulacao);
+                $("#valorTotal").text("TOTAL SIMULAÇÃO : R$" + totalSimulacao.toFixed(2));
     
                 $(toAppend).addClass("dragged-in");
                 $(this).append(toAppend);
@@ -48,23 +54,30 @@ $(document).ready(function() {
             }
         },
         out: function (event, ui) {
+            if (!$(ui.draggable).hasClass('new')) {
+                return;
+            }
             var valorSensor = $(ui.draggable).attr("valor");
 
             if (totalSimulacao > 0) {
-                totalSimulacao -= parseFloat(valorSensor);
+                totalSimulacao -= (parseFloat(valorSensor) + valorEsp);
             }
             if (quantidadeSensores > 0) {
                 quantidadeSensores -= 1;
 
-                $("#valorTotal").val("Valor Total da Simulação : R$" + totalSimulacao);
+                $("#valorTotal").text("TOTAL SIMULAÇÃO : R$" + totalSimulacao.toFixed(2));
 
                 if (quantidadeSensores == 0) {
-                    $("#valorTotal").val("");
+                    $("#valorTotal").text("");
 
                     $(".stackDrop").addClass("no-item");
-                    $(".stackDrop").append("<span style='text-align: center'>Arraste os sensores desejados aqui!</span>");
+
+                    if ($("#lightStatus").is(":checked")) {
+                        $(".stackDrop").append("<img id='dragImg' src='img/drag.png' style='width: 350px; height: 400px; opacity: 0.8; margin-top: 10%;'/>");
+                    } else {
+                        $(".stackDrop").append("<img id='dragImg' src='img/drag_w.png' style='width: 350px; height: 400px; opacity: 0.8; margin-top: 10%;'/>");    
+                    }
                 }
-                console.log("removing");
                 $(ui.draggable).remove();
             }
         }
@@ -84,7 +97,14 @@ $(document).ready(function() {
             $("#work .text_b").css("color", "#fff", "important");
             $("#work").css("background", "#161616");
 
-            $(".stackDrop a").css("color", "#000");
+            $("#cardDraggable").css("background", "#161616");
+            $(".stackDrop").css("background", "#161616");
+            $("#ui-droppable-active").css("background", "#161616");
+            $("#draggable-icon > div > a").css("color", "#fff");
+            $("#valorTotal").css("color", "#fff");
+
+            $("#dragImg").remove();
+            $(".stackDrop").append("<img id='dragImg' src='img/drag_w.png' style='width: 350px; height: 400px; opacity: 0.8; margin-top: 10%;'/>");
         } else {
             $("#top").css("background", "#fff");
             $("#top").css("color", "#000");
@@ -94,11 +114,18 @@ $(document).ready(function() {
             $("#team .card-avatar .card-content a").css("color", "#000");
 
             $("#work").css("color", "#004063");
-            $("#work span").css("color", "#000", "important");
+            $("#work a").css("color", "#000", "important");
             $("#work .text_b").css("color", "#004063", "important");
             $("#work").css("background", "rgb(247, 247, 247)");
 
-            $(".stackDrop a").css("color", "#000");
+            $("#cardDraggable").css("background", "#fff");
+            $(".stackDrop").css("background", "#fff");
+            $("#ui-droppable-active").css("background", "#fff");
+            $("#draggable-icon > div > a").css("color", "#000");
+            $("#valorTotal").css("color", "#000");
+
+            $("#dragImg").remove();
+            $(".stackDrop").append("<img id='dragImg' src='img/drag.png' style='width: 350px; height: 400px; opacity: 0.8; margin-top: 10%;'/>");
         }
     });
 

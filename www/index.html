@@ -10,17 +10,16 @@
     <script src="min/custom-min.js"></script>
     
     <!-- CSS  -->
-    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="min/plugin-min.js"></script>
+    <script src="min/custom-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
     <script src="js/app.js"></script>
 </head>
 
@@ -35,7 +34,7 @@
  
 </div>
 <!--Navigation-->
- <div class="navbar-fixed">
+ <div class="navbar">
     <nav id="nav_f z-depth-1" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
@@ -124,63 +123,63 @@
                     <span class="header text_b simu_header"><i class="mdi-action-perm-scan-wifi"></i>Sensores disponíveis</span>
                 </div>
                 <div class="row">
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="16.90">
                         <div style="text-align: center">
                             <img src="img/Icons/fogo.png" style="width: 64px; height: 64px;"/>
-                            <a>sensor incêndio </br> <b>R$ 20,00</b></a>
+                            <a>sensor incêndio </a>
                         </div>
                     </div>
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="12.9">
                         <div style="text-align: center">
                             <img src="img/Icons/chuva.png" style="width: 64px; height: 64px;"/>
-                            <a>sensor chuva </br> <b>R$ 20,00</b></a>
+                            <a>sensor chuva </a>
                         </div>
                     </div>
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="24.9">
                         <div style="text-align: center">
                             <img src="img/Icons/gas.png" style="width: 64px; height: 64px;"/>
-                            <a>sensor gás </br> <b>R$ 20,00</b></a>
+                            <a>sensor gás </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="15">
                         <div style="text-align: center">
                             <img src="img/Icons/luz.png" style="width: 64px; height: 64px;"/>
-                            <a>controle lâmpada </br> <b>R$ 20,00</b></a>
+                            <a>controle lâmpada </a>
                         </div>
                     </div>
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="10.9">
                         <div style="text-align: center">
                             <img src="img/Icons/solo.png" style="width: 64px; height: 64px;"/>
-                            <a>sensor chuva </br> <b>R$ 20,00</b></a>
+                            <a>sensor umidade solo </a>
                         </div>
                     </div>
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="12.9">
                         <div style="text-align: center">
                             <img src="img/Icons/temperatura.png" style="width: 64px; height: 64px;"/>
-                            <a>controle temp. </br> <b>R$ 20,00</b></a>
+                            <a>controle temp.</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="20">
+                    <div class="col s10 m2 draggable-icon" id="draggable-icon" valor="12.9">
                         <div style="text-align: center">
                             <img src="img/Icons/umidade.png" style="width: 64px; height: 64px;"/>
-                            <a>controle umidade solo </br> <b>R$ 20,00</b></a>
+                            <a>controle umidade </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col s12 m8 l8">
-                <div style="text-align: center;">
+                <div style="text-align: center; width: 80%;">
                     <span class="header text_b simu_header"><i class="mdi-action-home"></i>Minha Casa</span>
                 </div>
-                <div class="card">
+                <div id="cardDraggable" class="card" style="width: 80%;">
                     <div class="stackDrop no-item">
-                        <span style="text-align: center">Arraste os sensores desejados aqui!</span>  
+                        <img id="dragImg" src="img/drag.png" style="width: 350px; height: 400px; opacity: 0.8; margin-top: 10%;"/>
                     </div>
-                    <input type="text" value="" id="valorTotal" readonly/>
+                    <label id="valorTotal" style="color: #000;"></label>
                 </div>
             </div>
         </div>
