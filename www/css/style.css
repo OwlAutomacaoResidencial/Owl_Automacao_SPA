@@ -15,12 +15,12 @@
 }*/
 
 .navbar-fixed {
-    z-index: 9999;  
+    z-index: 9999 !important;  
 }
 
 #sidenav-overlay {
-    z-index: 1;
-    }
+    z-index: 996 !important;
+}
 
 .default_color{background-color: #004063;}
 
@@ -129,6 +129,16 @@
 }
 
 @media only screen and (max-width: 400px) {
+    .row .col.m2 {
+        width: 60% !important;
+        float: none;
+        margin: auto;
+    }
+
+    .row .col.s3 {
+        width: 100%;
+    }
+
     #work {
         display: none;
     }
@@ -159,6 +169,7 @@
     }
 
     #cellphone-example {
+        background-size: 97%;
         background-image: url('../img/cel.png');
         background-repeat: no-repeat;
         height: 700px;
@@ -167,12 +178,22 @@
     }
 
     .switch.app {
-        padding-top: 92%;
+        padding-top: 90%;
         padding-left: 60%;
     }
 }
 
 @media only screen and (max-width: 601px) and (min-width: 401px) {
+    .row .col.m2 {
+        width: 60% !important;
+        float: none;
+        margin: auto;
+    }
+
+    .row .col.s3 {
+        width: 100%;
+    }
+
     #work {
         display: none;
     }
@@ -214,7 +235,7 @@
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) and (min-width: 601px){
     html,body
     {
         width: 100%;
@@ -246,6 +267,24 @@
 
     .row .col {
         width: 100% !important;
+    }
+
+    #cellphone-example {
+        background-image: url('../img/cel.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        margin: 0 auto;
+        width: 343px;
+    }
+
+    .switch.app {
+        padding-top: 92%;
+        padding-left: 60%;
+    }
+
+    .parallax img {
+        content: url("../img/lights-600.jpeg") !important;
     }
 }
 
@@ -298,7 +337,6 @@
     min-height: 632px;
     max-height: 864px;
     position: relative;
-    /*background-color: #004063;*/
     background-image: url("../img/parallax5-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -552,4 +590,29 @@ footer.page-footer {
 
 .float-left {
     float: left !important;
+}
+
+
+@media only screen and (min-width : 993px) {
+    nav a.button-collapse-owl {
+        display: none; } 
+}
+
+nav .button-collapse-owl {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 56px; 
+}
+nav .button-collapse-owl i {
+    font-size: 2.7rem;
+    height: 56px;
+    line-height: 56px; 
+}
+
+@media only screen and (min-width : 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse-owl, nav a.button-collapse-owl i {
+      height: 64px;
+      line-height: 64px; 
+    }
 }

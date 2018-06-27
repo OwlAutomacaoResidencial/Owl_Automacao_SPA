@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     $('.modal').modal();
-  });
-
-  $( document ).ready(function() {
-    $(".button-collapse").sideNav();
-  });
+    
+    $('.button-collapse-owl').sideNav({
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    });
+});
 
 $(document).ready(function() {
     var request;
